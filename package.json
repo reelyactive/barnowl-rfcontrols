@@ -1,0 +1,40 @@
+{
+  "name": "barnowl-rfcontrols",
+  "homepage": "https://github.com/reelyactive/barnowl-rfcontrols/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Collect ambient RAIN RFID data from RF Controls readers.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "barnowl",
+    "RF Controls",
+    "raddec"
+  ],
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/barnowlrfcontrols.js",
+  "scripts": {
+    "start": "node bin/barnowl-rfcontrols"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/barnowl-rfcontrols.git"
+  },
+  "dependencies": {
+    "raddec": ">=0.3.1"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/barnowl-rfcontrols/issues"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Dungen"
+    }
+  ],
+  "license": "MIT"
+}
