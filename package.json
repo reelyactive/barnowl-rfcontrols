@@ -25,7 +25,7 @@
     "url": "https://github.com/reelyactive/barnowl-rfcontrols.git"
   },
   "dependencies": {
-    "raddec": ">=0.3.1"
+    "raddec": ">=0.3.2"
   },
   "devDependencies": {},
   "bugs": {

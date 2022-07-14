@@ -17,6 +17,8 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
+This will run the TestListener to create simulated RF Controls data, which will be printed to the console and forwarded via UDP to a local [Pareto Anywhere](https://github.com/reelyactive/pareto-anywhere) instance.
+
 
 Contributing
 ------------
