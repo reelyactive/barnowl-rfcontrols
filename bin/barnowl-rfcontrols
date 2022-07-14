@@ -1,11 +1,19 @@
 #!/usr/bin/env node
 
+const dgram = require('dgram');
 const BarnowlRfControls = require('../lib/barnowlrfcontrols.js');
 
+const HOST = 'localhost';
+const PORT = 50001;
+
+const client = dgram.createSocket('udp4');
 let barnowl = new BarnowlRfControls();
 
 barnowl.addListener(BarnowlRfControls.TestListener, {});
 
 barnowl.on('raddec', function(raddec) {
   console.log(raddec.toFlattened());
+
+  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true });
+  client.send(Buffer.from(raddecHex, 'hex'), PORT, HOST, (err) => { });
 });
