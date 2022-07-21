@@ -14,6 +14,7 @@ barnowl.addListener(BarnowlRfControls.TestListener, {});
 barnowl.on('raddec', function(raddec) {
   console.log(raddec.toFlattened());
 
-  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true });
+  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
+                                             includePosition: true });
   client.send(Buffer.from(raddecHex, 'hex'), PORT, HOST, (err) => { });
 });
