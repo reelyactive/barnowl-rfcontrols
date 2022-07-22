@@ -20,6 +20,65 @@ Clone this repository, install package dependencies with `npm install`, and then
 This will run the TestListener to create simulated RF Controls data, which will be printed to the console and forwarded via UDP to a local [Pareto Anywhere](https://github.com/reelyactive/pareto-anywhere) instance.
 
 
+Hello barnowl-rfcontrols!
+-------------------------
+
+```javascript
+const BarnowlRfControls = require('barnowl-rfcontrols');
+
+let barnowl = new BarnowlRfControls();
+
+barnowl.addListener(BarnowlRfControls.TestListener);
+
+barnowl.on('raddec', function(raddec) {
+  console.log(raddec);
+});
+```
+
+As output you should see a stream of [raddec](https://github.com/reelyactive/raddec/) objects similar to the following:
+
+```javascript
+{
+  transmitterId: '1ab00000000000000000a003',
+  transmitterIdType: 4,
+  receiverId: 'b797d495c7c94558a77b00a8059fa0b5',
+  receiverIdType: 6,
+  rssi: -80,
+  numberOfDecodings: 1,
+  numberOfReceivers: 1,
+  timestamp: 1658516050829,
+  position: [ 0, 0, 0 ]
+}
+```
+
+
+Supported Listener Interfaces
+-----------------------------
+
+The following listener interfaces are supported.
+
+### Websocket
+
+```javascript
+let options = {
+    url: "ws://localhost:61613/websockets/messaging",
+    username: "admin",
+    password: "admin",
+    regionIds: [],
+    isDebug: false
+};
+barnowl.addListener(BarnowlRfControls.WsListener, options);
+```
+
+### Test
+
+Provides simulated tagBlinkLite messages for testing purposes.
+
+```javascript
+barnowl.addListener(BarnowlRfControls.TestListener, {});
+```
+
+
 Contributing
 ------------
 
