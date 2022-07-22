@@ -18,7 +18,8 @@
   },
   "main": "./lib/barnowlrfcontrols.js",
   "scripts": {
-    "start": "node bin/barnowl-rfcontrols"
+    "start": "node bin/barnowl-rfcontrols",
+    "forwarder": "node bin/barnowl-rfcontrols-forwarder"
   },
   "repository": {
     "type": "git",

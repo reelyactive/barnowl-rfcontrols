@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const dgram = require('dgram');
+const BarnowlRfControls = require('../lib/barnowlrfcontrols.js');
+
+const client = dgram.createSocket('udp4');
+let barnowl = new BarnowlRfControls();
+
+barnowl.addListener(BarnowlRfControls.WsListener, {});
+
+barnowl.on('raddec', function(raddec) {
+  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
+                                             includePackets: true });
+  client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
+              function(err) { });
+});
