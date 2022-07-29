@@ -10,7 +10,7 @@ barnowl.addListener(BarnowlRfControls.WsListener, {});
 
 barnowl.on('raddec', function(raddec) {
   let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
-                                             includePackets: true });
+                                             includePosition: true });
   client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
               function(err) { });
 });
