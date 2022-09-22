@@ -1,7 +1,7 @@
 barnowl-rfcontrols
 ==================
 
-__barnowl-rfcontrols__ converts RAIN RFID decodings from RFC OS & [RF Controls](https://rf-controls.com/) smart antennas into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec) objects which facilitate any and all of the following applications:
+__barnowl-rfcontrols__ converts RAIN RFID decodings from [RF Controls](https://rf-controls.com/) smart antennas & RFC OS into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec) objects which facilitate any and all of the following applications:
 
 - RFID: _what_ is present, based on the device identifier?
 - RTLS: _where_ is it relative to the receiving devices?
