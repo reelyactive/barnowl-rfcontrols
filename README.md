@@ -1,7 +1,12 @@
 barnowl-rfcontrols
 ==================
 
-Collect ambient RAIN RFID data from RF Controls readers.
+__barnowl-rfcontrols__ converts RAIN RFID decodings from RFC OS & [RF Controls](https://rf-controls.com/) smart antennas into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec) objects which facilitate any and all of the following applications:
+
+- RFID: _what_ is present, based on the device identifier?
+- RTLS: _where_ is it relative to the receiving devices?
+
+__barnowl-rfcontrols__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-rfcontrols) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between. It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
 
 
 Installation
@@ -42,7 +47,7 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
   transmitterId: '1ab00000000000000000a003',
   transmitterIdType: 4,
   receiverId: 'b797d495c7c94558a77b00a8059fa0b5',
-  receiverIdType: 6,
+  receiverIdType: 5,
   rssi: -80,
   numberOfDecodings: 1,
   numberOfReceivers: 1,
