@@ -22,7 +22,7 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-This will run the TestListener to create simulated RF Controls data, which will be printed to the console and forwarded via UDP to a local [Pareto Anywhere](https://github.com/reelyactive/pareto-anywhere) instance.
+__barnowl-rfcontrols__ will attempt to establish a STOMP over WebSockets connection with an RFC OS instance running on the same machine (using the default auth credentials) and attempt to retrieve the regionIds via the RFC OS instance's REST API, to which it will subscribe.  The processed [raddec](https://github.com/reelyactive/raddec/) data from any tag reads will be printed to the console.
 
 
 Hello barnowl-rfcontrols!
@@ -74,6 +74,8 @@ let options = {
 };
 barnowl.addListener(BarnowlRfControls.WsListener, options);
 ```
+
+If no regionIds are explicitly provided, __barnowl-rfcontrols__ will attempt to automatically retrieve all region IDs from RFC OS via the REST API.
 
 ### Test
 
