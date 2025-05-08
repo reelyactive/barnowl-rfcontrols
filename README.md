@@ -1,18 +1,11 @@
 barnowl-rfcontrols
 ==================
 
-__barnowl-rfcontrols__ converts RAIN RFID decodings from [RF Controls](https://rf-controls.com/) smart antennas & RFC OS into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec) objects which facilitate any and all of the following applications:
+__barnowl-rfcontrols__ converts RAIN RFID decodings from [RF Controls](https://rf-controls.com/) smart antennas & RFC OS into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
-- RFID: _what_ is present, based on the device identifier?
-- RTLS: _where_ is it relative to the receiving devices?
+![Overview of barnowl-rfcontrols](https://reelyactive.github.io/barnowl-rfcontrols/images/overview.png)
 
-__barnowl-rfcontrols__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-rfcontrols) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between. It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
-
-
-Installation
-------------
-
-    npm install barnowl-rfcontrols
+__barnowl-rfcontrols__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-rfcontrols) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
 Quick Start
@@ -116,4 +109,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 THE SOFTWARE.
-
