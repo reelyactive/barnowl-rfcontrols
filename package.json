@@ -5,14 +5,14 @@
     "name": "reelyActive",
     "email": "info@reelyactive.com"
   },
-  "description": "Collect ambient RAIN RFID data from RF Controls readers.  We believe in an open Internet of Things.",
+  "description": "Collect ambient RAIN RFID data from RF Controls overhead RTLS smart antennas.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "barnowl",
     "RF Controls",
     "raddec"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -26,7 +26,7 @@
     "url": "https://github.com/reelyactive/barnowl-rfcontrols.git"
   },
   "dependencies": {
-    "raddec": ">=0.4.2",
+    "raddec": ">=0.6.1",
     "stompit": "^1.0.0"
   },
   "devDependencies": {},
